@@ -324,9 +324,9 @@ export const ChatInput = ({
                   : 'hidden'
               }`,
             }}
-            placeholder={
-              t('Type a message or type "/" to select a prompt...') || ''
-            }
+            // placeholder={
+            //   t('Type a message or type "/" to select a prompt...') || ''
+            // }
             value={content}
             rows={1}
             onCompositionStart={() => setIsTyping(true)}
@@ -357,7 +357,7 @@ export const ChatInput = ({
             </div>
           )}
 
-          {showPromptList && filteredPrompts.length > 0 && (
+          {/* {showPromptList && filteredPrompts.length > 0 && (
             <div className="absolute bottom-12 w-full">
               <PromptList
                 activePromptIndex={activePromptIndex}
@@ -367,7 +367,7 @@ export const ChatInput = ({
                 promptListRef={promptListRef}
               />
             </div>
-          )}
+          )} */}
 
           {isModalVisible && (
             <VariableModal
@@ -379,7 +379,7 @@ export const ChatInput = ({
           )}
         </div>
       </div>
-      <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
+      {/* <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
         <a
           href="https://github.com/mckaywrigley/chatbot-ui"
           target="_blank"
@@ -392,7 +392,7 @@ export const ChatInput = ({
         {t(
           "Chatbot UI is an advanced chatbot kit for OpenAI's chat models aiming to mimic ChatGPT's interface and functionality.",
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

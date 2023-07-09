@@ -27,6 +27,11 @@ const handler = async (req: Request): Promise<Response> => {
     let promptToSend = prompt;
     if (!promptToSend) {
       promptToSend = DEFAULT_SYSTEM_PROMPT;
+    }else{
+      promptToSend = `角色：博方教育科技开发的聊天机器人，服务与学校助理系统
+      要求: 禁止回复OpenAI、GPT3.5
+      对话方式: 回复简洁明了，不啰嗦。请仔细遵循用户的指示。使用 Markdown 格式进行回应。
+      问题: ${promptToSend}`
     }
 
     let temperatureToUse = temperature;

@@ -10,6 +10,7 @@ RUN npm ci
 # ---- Build ----
 FROM dependencies AS build
 COPY . .
+ARG NEXT_PUBLIC_BASE_PATH
 RUN npm run build
 
 # ---- Production ----

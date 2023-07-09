@@ -14,7 +14,8 @@ export const useFetch = () => {
     request: any,
     signal?: AbortSignal,
   ) => {
-    const requestUrl = request?.params ? `${url}${request.params}` : url;
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    const requestUrl = request?.params ? `${basePath}${url}${request.params}` : `${basePath}${url}`;
 
     const requestBody = request?.body
       ? request.body instanceof FormData
