@@ -351,7 +351,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     <div className="relative flex-1 overflow-hidden bg-white dark:bg-[#343541]">
       {!(apiKey || serverSideApiKeyIsSet) ? (
         <div className="mx-auto flex h-full w-[300px] flex-col justify-center space-y-6 sm:w-[600px]">
-          <div className="text-center text-4xl font-bold text-black dark:text-white">
+          {/* <div className="text-center text-4xl font-bold text-black dark:text-white">
             Welcome to Chatbot UI
           </div>
           <div className="text-center text-lg text-black dark:text-white">
@@ -359,22 +359,22 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             <div className="mb-2 font-bold">
               Important: Chatbot UI is 100% unaffiliated with OpenAI.
             </div>
-          </div>
+          </div> */}
           <div className="text-center text-gray-500 dark:text-gray-400">
-            <div className="mb-2">
+            {/* <div className="mb-2">
               Chatbot UI allows you to plug in your API key to use this UI with
               their API.
             </div>
             <div className="mb-2">
               It is <span className="italic">only</span> used to communicate
               with their API.
-            </div>
+            </div> */}
             <div className="mb-2">
               {t(
-                'Please set your OpenAI API key in the bottom left of the sidebar.',
+                '请在左下角设置API密钥.',
               )}
             </div>
-            <div>
+            {/* <div>
               {t("If you don't have an OpenAI API key, you can get one here: ")}
               <a
                 href="https://platform.openai.com/account/api-keys"
@@ -384,7 +384,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
               >
                 openai.com
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       ) : modelError ? (
@@ -445,7 +445,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                 ref={messagesEndRef}
               />
             </>
-            )}
+            )
           </div>
 
           <ChatInput

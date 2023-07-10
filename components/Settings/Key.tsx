@@ -45,7 +45,7 @@ export const Key: FC<Props> = ({ apiKey, onApiKeyChange }) => {
         value={newKey}
         onChange={(e) => setNewKey(e.target.value)}
         onKeyDown={handleEnterDown}
-        placeholder={t('API Key') || 'API Key'}
+        placeholder={'API密钥'}
       />
 
       <div className="flex w-[40px]">
@@ -71,7 +71,7 @@ export const Key: FC<Props> = ({ apiKey, onApiKeyChange }) => {
     </div>
   ) : (
     <SidebarButton
-      text={t('OpenAI API Key')}
+      text={'API密钥'}
       icon={<IconKey size={18} />}
       onClick={() => setIsChanging(true)}
     />
